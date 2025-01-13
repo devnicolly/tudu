@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--roxo-fundo: #AB9BB2;
+	--roxo-escuro-fundo: #615865;
+	--offwhite: #EEECE2;
+	--verde-clarinho: #E3EAD1;
+	--lilas: #9987A1;
+	--verde: #A3AB90;
+	--verde-musgo: #828971;
+	--verde-musgo-escuro: #646A54;
+	--cinza-esverdeado: #BBBAB1;
+}
+
+body{
+	background-image:linear-gradient(#AB9BB2 0%, #615865 100%);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.cabecalho{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-header{
+	height: 12vh;
+} 
+
+.img-header-logo{
+	height: 18vh;
+}
+
+#linha{
+	height: 1vh;
+	width: 100%;
+	background-color: var(--lilas);
+}
+
+.conteudo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 15vh;
+}
+
+.conteiner{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 5%;
+	background-color: var(--offwhite);
+	height: 15vh;
+	width: 60vw;
+	border-radius: 40px;
+}
+
+#add-tarefa{
+	border: solid 2px var(--lilas);
+	width: 20vw;
+	height: 5vh;
+	font-family: "Fredoka", serif;
+	font-weight: 500;
+	font-size: 1.5rem;
+	background-color: var(--verde-clarinho);
+	color: var(--verde);
+	border-radius: 20px;
+} #add-tarefa:hover{
+	background-color: var(--verde);
+	color: var(--offwhite);
+}
+
+.btn-secondary {
+	background-color: var(--offwhite);
+	border: none;
+	font-family: "Fredoka", serif;
+	font-weight: 500;
+	color: var(--lilas);
+	font-size: 1.5rem;
+} .btn-secondary:hover{
+	background-color: var(--lilas);
+} .btn-secondary:focus{
+	background-color: var(--lilas);
+}
+
+.dropdown-menu{
+	background-color: var(--verde-clarinho);
+}
+
+.dropdown-item:focus{
+	background-color: var(--verde);
+}
+
+#filter{
+	height: 3.5vh;
+}
+
+.div-tarefas{
+	background-color: var(--offwhite);
+	width: 60vw;
+	max-height: 80vh;
+	overflow: hidden;
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 2%;
+	overflow-y: auto;
+}
+
+#molas{
+	height: 12vh;
+	z-index: 1;
+	position: absolute;
+	pointer-events: none;
+	margin-top: 22%;
+}
+
+
+#texto-tarefa{
+	margin-top: 6vh;
+	font-family: "Fredoka", serif;
+	font-size: 2.5rem;
+	font-weight: 500;
+	color: var(--cinza-esverdeado);
+}
+
+#linha-tarefa{
+	height: 0.5vh;
+	background-color: var(--cinza-esverdeado);
+	width: 45vw;
+	margin-bottom: 20px;
+}
+
+.modal-header{
+	background-color: var(--verde-clarinho);
+	color: var(--verde-musgo-escuro);
+}
+
+.modal-title{
+	font-size: 1.5rem;
+}
+
+.modal-content{
+	background-color: var(--lilas);
+	color: var(--verde-clarinho);
+	border-radius: 30px;
+	margin-top: 30%;
+	font-family: "Fredoka", serif;
+	font-size: 1.2rem;
+}
+
+.form-control{
+	background-color: var(--offwhite);
+}
+
+.form-control::placeholder{
+	color: var(--roxo-escuro-fundo);
+}
+
+.form-select{
+	background-color: var(--offwhite);
+	color: var(--roxo-escuro-fundo);
+}
+
+#btn-add{
+	background-color: var(--verde-clarinho);
+	color: var(--verde-musgo-escuro);
+	font-weight: 500;
+	border: none;
+}
+
+
+.task{
+	width: 40vw;
+	height: 12vh;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5%;
+}
+
+#task-container {
+	display: flex;
+	flex-direction: column; 
+	max-width: 100%;
+	box-sizing: border-box;
+	gap: 20px; 
+	overflow: auto;
+	padding: 5%;
+	max-height: calc(100vh - 200px);
+ }
+
+.icon-btn{
+	height: 7.5vh;
+	cursor: pointer;
+}
+
+
+.title-div{
+	display: flex;
+	align-items: center;
+	background-color: var(--offwhite);
+	height: 4vh;
+	border-radius: 10px;
+	width: max-content;
+	padding: 2%;
+}
+
+.task-title{
+	text-align: center;
+	font-family: "Fredoka", serif;
+	font-size: 1.2rem;
+	color: var(--roxo-escuro-fundo);
+	cursor: pointer;
+}
+
+.task-tags{
+	height: max-content;
+	background-color: var(--offwhite);
+	border-radius: 10px;
+	width: max-content;
+	padding: 1px;
+}
+
+.tag{
+	font-family: "Fredoka", serif;
+	font-size: 1.2rem;
+	color: var(--verde-musgo);
+	font-weight: 500;
+}
+
+#footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
+}
+
+#credito{
+	color: var(--verde-clarinho);
+	font-family: "Fredoka", serif;
+	font-size: 1.2rem;
+}
+
+
+
+/* ajustes para celulares*/
+@media (max-width: 768px) {
+
+    .cabecalho {
+        justify-content: center;
+    }
+
+	.img-header{
+		height: 5vh;
+	} .img-header-logo{
+		height: 6vh;
+	}
+
+    #logo-texto {
+        height: 6vh;
+    }
+
+	#linha{
+		margin-top: 2%;
+		height: 0.2vh;
+	}
+
+    .conteiner {
+		margin-top: 15%;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    #add-tarefa {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .dropdown-menu {
+        width: 80%;
+    }
+
+    #molas {
+		margin-top: 80%;
+        height: 5vh;
+    }
+
+    .div-tarefas {
+		margin-top: -10%;
+        width: 90%;
+        max-height: 60vh;
+    }
+
+    .task {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .icon-btn {
+        height: 6vh;
+    }
+
+    .title-div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .task-title {
+        font-size: 1rem;
+    }
+
+    .task-tags {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ajustes para tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+    main{
+		overflow: hidden;
+	}
+	
+	.conteiner {
+        width: 70%;
+    }
+
+	#add-tarefa {
+        width: 60%;
+        font-size: 1.5rem;
+    }
+
+	
+    #molas {
+		margin-top: 42%;
+        height: 5vh;
+    }
+
+    .div-tarefas {
+        width: 70%;
+    }
+
+    .task {
+        width: 100%;
+    }
+
+	.task-title {
+        font-size: 1.2rem;
+    }
+
+    .task-tags {
+        width: 100%;
+        text-align: center;
+    }
+
+	.icon-btn {
+        height: 4vh;
+    }
+}
+
