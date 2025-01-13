@@ -10,6 +10,7 @@ a to do app :)
 - JS.
 - Html.
 
+# ✍️ Uso
 - Faça download para acessar na sua máquina, ou clique no link a seguir: https://tudu-sepia.vercel.app/
 
 - Obs: Para editar uma tarefa deve clicar no título da mesma, aproveite. ☺️
